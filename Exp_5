@@ -1,5 +1,21 @@
-node {
-    stage('hello') {
-        echo 'Hello world'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'HI, welcome to pipeline demo...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Sample testing of stage 2'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Thanks for using Jenkins Pipelines'
+            }
+        }
     }
 }
